@@ -1,0 +1,160 @@
+[
+  {
+    "_id": "t101",
+    "name": "Talking Doll",
+    "imgUrl": "hardcoded-url-for-now",
+    "price": 123,
+    "labels": [
+      "Doll",
+      "Battery Powered",
+      "Baby"
+    ],
+    "createdAt": 1631031801011,
+    "inStock": true,
+    "owner": {
+      "_id": "u101",
+      "fullname": "Alice Wonderland"
+    }
+  },
+  {
+    "_id": "t102",
+    "name": "Race Car",
+    "imgUrl": "hardcoded-url-for-now",
+    "price": 99,
+    "labels": [
+      "On wheels",
+      "Battery Powered",
+      "Outdoor"
+    ],
+    "createdAt": 1631042801011,
+    "inStock": true,
+    "owner": {
+      "_id": "u102",
+      "fullname": "Bob Speedster"
+    }
+  },
+  {
+    "_id": "t103",
+    "name": "Building Blocks",
+    "imgUrl": "hardcoded-url-for-now",
+    "price": 45,
+    "labels": [
+      "Box game",
+      "Baby"
+    ],
+    "createdAt": 1631053801011,
+    "inStock": true,
+    "owner": {
+      "_id": "u103",
+      "fullname": "Charlie Builder"
+    }
+  },
+  {
+    "_id": "t104",
+    "name": "Magic Puzzle",
+    "imgUrl": "hardcoded-url-for-now",
+    "price": 65,
+    "labels": [
+      "Puzzle",
+      "Art"
+    ],
+    "createdAt": 1631064801011,
+    "inStock": false,
+    "owner": {
+      "_id": "u104",
+      "fullname": "Dina Puzzler"
+    }
+  },
+  {
+    "_id": "t105",
+    "name": "Art Kit",
+    "imgUrl": "hardcoded-url-for-now",
+    "price": 79,
+    "labels": [
+      "Art"
+    ],
+    "createdAt": 1631075801011,
+    "inStock": true,
+    "owner": {
+      "_id": "u105",
+      "fullname": "Ella Artist"
+    }
+  },
+  {
+    "_id": "t106",
+    "name": "Baby Rattle",
+    "imgUrl": "hardcoded-url-for-now",
+    "price": 20,
+    "labels": [
+      "Baby"
+    ],
+    "createdAt": 1631086801011,
+    "inStock": true,
+    "owner": {
+      "_id": "u106",
+      "fullname": "Fiona BabyLover"
+    }
+  },
+  {
+    "_id": "t107",
+    "name": "Outdoor Tent",
+    "imgUrl": "hardcoded-url-for-now",
+    "price": 150,
+    "labels": [
+      "Outdoor"
+    ],
+    "createdAt": 1631097801011,
+    "inStock": false,
+    "owner": {
+      "_id": "u107",
+      "fullname": "George Camper"
+    }
+  },
+  {
+    "_id": "t108",
+    "name": "Electric Train",
+    "imgUrl": "hardcoded-url-for-now",
+    "price": 200,
+    "labels": [
+      "On wheels",
+      "Battery Powered"
+    ],
+    "createdAt": 1631108801011,
+    "inStock": true,
+    "owner": {
+      "_id": "u108",
+      "fullname": "Harry Driver"
+    }
+  },
+  {
+    "_id": "t109",
+    "name": "Plush Bear",
+    "imgUrl": "hardcoded-url-for-now",
+    "price": 300,
+    "labels": [
+      "Baby",
+      "Doll"
+    ],
+    "createdAt": 1631119801011,
+    "inStock": true,
+    "owner": {
+      "_id": "u109",
+      "fullname": "Isla Hugger"
+    }
+  },
+  {
+    "_id": "t110",
+    "name": "Board Game: Adventure Quest",
+    "imgUrl": "hardcoded-url-for-now",
+    "price": 89,
+    "labels": [
+      "Box game"
+    ],
+    "createdAt": 1631130801011,
+    "inStock": true,
+    "owner": {
+      "_id": "u110",
+      "fullname": "Jack Gamer"
+    }
+  }
+]

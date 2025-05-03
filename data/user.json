@@ -1,0 +1,62 @@
+[
+  {
+    "_id": "u101",
+    "username": "alice",
+    "fullname": "Alice Wonderland",
+    "password": "alice123"
+  },
+  {
+    "_id": "u102",
+    "username": "bob",
+    "fullname": "Bob Speedster",
+    "password": "bob123"
+  },
+  {
+    "_id": "u103",
+    "username": "charlie",
+    "fullname": "Charlie Builder",
+    "password": "charlie123"
+  },
+  {
+    "_id": "u104",
+    "username": "dina",
+    "fullname": "Dina Puzzler",
+    "password": "dina123"
+  },
+  {
+    "_id": "u105",
+    "username": "ella",
+    "fullname": "Ella Artist",
+    "password": "ella123"
+  },
+  {
+    "_id": "u106",
+    "username": "fiona",
+    "fullname": "Fiona BabyLover",
+    "password": "fiona123"
+  },
+  {
+    "_id": "u107",
+    "username": "george",
+    "fullname": "George Camper",
+    "password": "george123"
+  },
+  {
+    "_id": "u108",
+    "username": "harry",
+    "fullname": "Harry Driver",
+    "password": "harry123"
+  },
+  {
+    "_id": "u109",
+    "username": "isla",
+    "fullname": "Isla Hugger",
+    "password": "isla123"
+  },
+  {
+    "_id": "u110",
+    "username": "jack",
+    "fullname": "Jack Gamer",
+    "password": "jack123"
+  }
+]
