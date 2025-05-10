@@ -37,6 +37,8 @@ app.get('/api/toy', (req, res) => {
         maxPrice: +req.query.maxPrice || 0,
         pageIdx: req.query.pageIdx || undefined,
     }
+
+ 
     toyService.query(filterBy)
         .then(toys => res.send(toys))
         .catch(err => {
