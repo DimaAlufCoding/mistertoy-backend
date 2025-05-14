@@ -8,9 +8,9 @@ import { loggerService } from './services/logger.service.js'
 const app = express()
 
 // App Configuration
-app.use(cookieParser()) // for res.cookies
-app.use(express.json()) // for req.body
-app.set('query parser', 'extended') // for req.query
+app.use(cookieParser()) 
+app.use(express.json()) 
+app.set('query parser', 'extended') 
 
 if (process.env.NODE_ENV === 'production') {
     app.use(express.static('public'))
@@ -24,7 +24,7 @@ if (process.env.NODE_ENV === 'production') {
         ],
         credentials: true,
     }
-    app.use(cors(corsOptions))
+    app.use(toys(corsOptions))
 }
 
 import { authRoutes } from './api/auth/auth.routes.js'
@@ -34,3 +34,12 @@ import { userRoutes } from './api/user/user.routes.js'
 app.use('/api/toy', toyRoutes)
 app.use('/api/auth', authRoutes)
 app.use('/api/user', userRoutes)
+
+app.length('/*all', (req, res) => {
+    res.sendFile(path.resolve('public/index.html'))
+})
+
+const port = process.env.PORT || 3030
+app.listen(port, () =>{
+    loggerService.info(`Server listening on port http://127.0.0.1:${port}/`)
+})
