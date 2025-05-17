@@ -19,18 +19,20 @@ export const toyService = {
 async function query(filterBy = {}) {
     // const limitSize = filterBy.fetchAll ? 0 : PAGE_SIZE
 
+
     try {
-        const { filterCriteria, sortCriteria, skip } = _buildCriteria(filterBy)
+        const { filterCriteria, sortCriteria } = _buildCriteria(filterBy)
+        console.log('FILTER:', filterCriteria)
+        console.log('SORT:', sortCriteria)
+        // console.log('LIMIT:', limitSize)
 
         const collection = await dbService.getCollection('toy')
         console.log(collection)
 
         const filteredToys = await collection
             .find(filterCriteria)
-            .collection({ 'locale': 'en' })
             .sort(sortCriteria)
-            .skip(skip)
-            .limit(limitSize)
+            // .limit(limitSize)
             .toArray()
 
         const totalCount = filteredToys.length
@@ -150,12 +152,13 @@ function _buildCriteria(filterBy) {
     const sortCriteria = {}
     const sortBy = filterBy.sortBy
 
-    if (sortBy.type) {
+    if (sortBy?.type) {
         const sortDirection = +sortBy.sortDir
         sortCriteria[sortBy.type] = sortDirection
-    } else sortCriteria.createdAt = -1
+    } else {
+        sortCriteria.createdAt = -1
+    }
 
-    const skip =
-        filterBy.pageIdx !== undefined ? filterBy.pageIdx * PAGE_SIZE : 0
-    return { filterCriteria, sortCriteria, skip }
+    return { filterCriteria, sortCriteria }
 }
+

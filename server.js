@@ -2,6 +2,7 @@ import cookieParser from 'cookie-parser'
 import cors from 'cors'
 import express from 'express'
 import path from 'path'
+import { toyService } from './api/toy/toy.service.js'
 
 import { loggerService } from './services/logger.service.js'
 
@@ -24,7 +25,7 @@ if (process.env.NODE_ENV === 'production') {
         ],
         credentials: true,
     }
-    app.use(toys(corsOptions))
+    app.use(cors(corsOptions))
 }
 
 import { authRoutes } from './api/auth/auth.routes.js'
@@ -35,11 +36,18 @@ app.use('/api/toy', toyRoutes)
 app.use('/api/auth', authRoutes)
 app.use('/api/user', userRoutes)
 
-app.length('/*all', (req, res) => {
+app.get('/*', (req, res) => {
     res.sendFile(path.resolve('public/index.html'))
 })
 
 const port = process.env.PORT || 3030
-app.listen(port, () =>{
+app.listen(port, async () => {
     loggerService.info(`Server listening on port http://127.0.0.1:${port}/`)
+
+    try {
+        const toys = await toyService.query({ fetchAll: true }) // 👈 הבאת כל הצעצועים
+        console.log('📦 Toys in DB on startup:', toys) // 👈 הדפסה לקונסול
+    } catch (err) {
+        console.error('❌ Failed to fetch toys on startup:', err)
+    }
 })
